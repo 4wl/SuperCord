@@ -25,15 +25,15 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B clean package --file pom.xml
-    - name: Create Release
-    - uses: actions/create-release@latest
+    - name: Create a Release
+      uses: actions/create-release@latest
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
         body: |
-          "一個測試的Build ${{ github.ref }}"
+          "一個正常的建置。"
         draft: false
         prerelease: false
 
