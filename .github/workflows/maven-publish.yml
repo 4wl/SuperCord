@@ -31,5 +31,5 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
-          **/*.jar
+          target/SuperCord-1.0-SNAPSHOT.jar
 
