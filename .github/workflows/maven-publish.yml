@@ -27,9 +27,9 @@ jobs:
       run: mvn -B clean package --file pom.xml
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
+        automatic_release_tag: latest
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
-          LICENSE.txt
           *.jar
 
