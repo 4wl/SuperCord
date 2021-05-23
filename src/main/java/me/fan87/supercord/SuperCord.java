@@ -20,6 +20,7 @@ public final class SuperCord {
     public static Table mojangAPITable;
 
     public static final String VERSION = "1.3";
+    // TEST
 
 
     public static void setupSuperCord() throws SQLException, ClassNotFoundException {
