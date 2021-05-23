@@ -25,3 +25,13 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B clean package --file pom.xml
+    - name: Release to Github
+      uses: marvinpinto/action-automatic-releases@v1.2.0
+      with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            target/*.jar
+
